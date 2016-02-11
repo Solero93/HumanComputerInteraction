@@ -58,7 +58,7 @@
             </ul>
         </div>
 
-        <div id='content-load' class="col-xs-10 col-xs-offset-2">
+        <div id='content-load' class="col-xs-10 col-xs-offset-2" style="height: 90vh; overflow: auto">
         </div>
 
 
@@ -131,12 +131,12 @@
             $('#home').click();
         })
 
-        $('#load-buttons span').click(function (event) {
-            var page = $(event.currentTarget).attr("page");
+        $('#load-buttons li').click(function (event) {
+            var page = $(event.currentTarget).find('span').attr("page");
             var loadDiv = $('#content-load');
 
             $('#load-buttons .active').removeClass('active');
-            $(event.currentTarget).parent().addClass('active');
+            $(event.currentTarget).addClass('active');
 
             loadDiv.fadeOut(0);
             $.get(page, function (data) {
