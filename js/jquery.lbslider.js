@@ -110,4 +110,4 @@
         };
         return this.each(make);
     };
-})(jQuery);
+})($);

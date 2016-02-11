@@ -16,7 +16,7 @@ var llumsStatus = false;
 var neveraStatus = false;
 
 
-$(window).load(function () {
+$('document').ready(function () {
     //alert("Document loaded, including graphics and embedded documents (like SVG)");
     rentadora = $("#rentadora");
     forn = $("#forn");
@@ -43,35 +43,35 @@ $(window).load(function () {
     llums_rect.hide();
 });
 
-jQuery('.banySlider').lbSlider({
+$('.banySlider').lbSlider({
     leftBtn: '.sa-left-bany',
     rightBtn: '.sa-right-bany',
     visible: 3,
     autoPlay: false
 });
 
-jQuery('.salaEstarSlider').lbSlider({
+$('.salaEstarSlider').lbSlider({
     leftBtn: '.sa-left-salaEstar',
     rightBtn: '.sa-right-salaEstar',
     visible: 3,
     autoPlay: false
 });
 
-jQuery('.cuinaSlider').lbSlider({
+$('.cuinaSlider').lbSlider({
     leftBtn: '.sa-left-cuina',
     rightBtn: '.sa-right-cuina',
     visible: 3,
     autoPlay: false
 });
 
-jQuery('.dormitoriSlider').lbSlider({
+$('.dormitoriSlider').lbSlider({
     leftBtn: '.sa-left-dormitori',
     rightBtn: '.sa-right-dormitori',
     visible: 3,
     autoPlay: false
 });
 
-jQuery('.altresSlider').lbSlider({
+$('.altresSlider').lbSlider({
     leftBtn: '.sa-left-altres',
     rightBtn: '.sa-right-altres',
     visible: 3,

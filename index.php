@@ -13,6 +13,7 @@
 	<!-- Bootstrap core CSS -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
@@ -49,10 +50,15 @@
 	<div class="row">
 
 		<div class="col-fixed-80">
-			<p>Col 1</p>
+			<button class="btn btn-block btn-success">HOME</button>
+			<br>
+			<button class="btn btn-block btn-success">FACTURA</button>
+			<br>
+			<button class="btn btn-block btn-success">GREEN</button>
+			<br>
 		</div>
 
-		<div id='content_load' class="col-xs-12 col-offset-80">
+		<div id='content-load' class="col-xs-12 col-offset-80">
 			<p>Col 2</p>
 		</div>
 
@@ -65,6 +71,7 @@
 <style type="text/css">
 
 	.col-fixed-80 {
+		margin-top: 15px;
 		margin-left: 15px;
 		text-align: center;
 		width: 80px;
@@ -73,12 +80,7 @@
 	}
 
 	.col-offset-80 {
-		padding-left: 95px;
-	}
-
-	p {
-		width: 100%;
-		background-color: red;
+		padding-left: 110px; /* 80 + 15 padding-left + 15 padding-right*/
 	}
 
 </style>
@@ -88,5 +90,13 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+
+	$('document').ready(function () {
+		$('#content-load').load("main.php");
+	})
+
+</script>
 </body>
 </html>
