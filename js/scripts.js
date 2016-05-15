@@ -14,6 +14,7 @@ var fornStatus = false;
 var televisioStatus = false;
 var llumsStatus = false;
 var neveraStatus = false;
+var rentadoraStatus = false;
 
 
 $('document').ready(function () {
@@ -133,6 +134,9 @@ function drop(e) {
         case "nevera_drag":
             nevera_rect.hide();
             break;
+        case "rentadora_drag":
+            rentadora_rect.hide();
+            break;
     }
 }
 
@@ -164,51 +168,50 @@ function drop_forn(e) {
         forn.toggle();
         fornStatus = !fornStatus;
     }
+}
 
-    function drop_nevera(e) {
-        // Cancel this event for everyone else
-        e.stopPropagation();
-        e.preventDefault();
+function drop_nevera(e) {
+    // Cancel this event for everyone else
+    e.stopPropagation();
+    e.preventDefault();
 
-        // Retrieve the dragged data by type
-        var objId = e.dataTransfer.getData("objId");
+    // Retrieve the dragged data by type
+    var objId = e.dataTransfer.getData("objId");
 
-        if (objId == "nevera_drag") {
-            nevera_rect.hide();
-            nevera.toggle();
-            neveraStatus = !neveraStatus;
-        }
+    if (objId == "nevera_drag") {
+        nevera_rect.hide();
+        nevera.toggle();
+        neveraStatus = !neveraStatus;
     }
+}
 
-    function drop_rentadora(e) {
-        // Cancel this event for everyone else
-        e.stopPropagation();
-        e.preventDefault();
+function drop_rentadora(e) {
+    // Cancel this event for everyone else
+    e.stopPropagation();
+    e.preventDefault();
 
-        // Retrieve the dragged data by type
-        var objId = e.dataTransfer.getData("objId");
+    // Retrieve the dragged data by type
+    var objId = e.dataTransfer.getData("objId");
 
-        if (objId == "nevera_drag") {
-            nevera_rect.hide();
-            nevera.toggle();
-            neveraStatus = !neveraStatus;
-        }
+    if (objId == "rentadora_drag") {
+        rentadora_rect.hide();
+        rentadora.toggle();
+        rentadoraStatus = !rentadoraStatus;
     }
+}
 
-    function drop_llums(e) {
-        // Cancel this event for everyone else
-        e.stopPropagation();
-        e.preventDefault();
+function drop_llums(e) {
+    // Cancel this event for everyone else
+    e.stopPropagation();
+    e.preventDefault();
 
-        // Retrieve the dragged data by type
-        var objId = e.dataTransfer.getData("objId");
+    // Retrieve the dragged data by type
+    var objId = e.dataTransfer.getData("objId");
 
-        if (objId == "llums_drag") {
-            llums_rect.hide();
-            forn.toggle();
-            llumsStatus = !llumsStatus;
-        }
+    if (objId == "llums_drag") {
+        llums_rect.hide();
+        llums.toggle();
+        llumsStatus = !llumsStatus;
     }
-
 }
 
