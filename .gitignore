@@ -7,6 +7,7 @@ overs JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, And
 .idea/dictionaries
 .idea/vcs.xml
 .idea/jsLibraryMappings.xml
+.idea/webluz.iml
 
 # Sensitive or high-churn files:
 .idea/dataSources.ids
