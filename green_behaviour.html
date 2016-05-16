@@ -4,8 +4,71 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <script src="assets/js/jquery-ui-1.9.2.custom.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#tabs").tabs();
+        });
+    </script>
+
 </head>
 <body>
-    aslkdjadlj
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            <h1>Com de verd sóc?</h1>
+            <div id="tabs">
+                <ul class="nav nav-tabs">
+                    <li><a href="#yearly">Anual</a></li>
+                    <li><a href="#monthly">Mensual</a></li>
+                    <li><a href="#daily">Diari</a></li>
+                </ul>
+                <div id="yearly">
+                    <h3>El teu consum anual en kWh</h3>
+                    <img src="img/bar-yo.png" height="300" width="450">
+                    <div style="text-align: center">
+                        <h4>Total : 1400</h4>
+                    </div>
+                </div>
+                <div id="monthly">
+                    <h3>El teu consum mensual en kWh</h3>
+                    <img src="img/bar-yo.png" height="300" width="450">
+                    <div style="text-align: center">
+                        <h4>Total : 1400</h4>
+                    </div>
+                </div>
+                <div id="daily">
+                    <h3>El teu consum anual en kWh</h3>
+                    <img src="img/bar-yo.png" height="300" width="450">
+                    <div style="text-align: center">
+                        <h4>Total : 1400</h4>
+                    </div>
+                </div>
+            </div>
+            <h1>Consells per estalviar</h1>
+            Hauries de baixar el teu consum en lorem ipsum dolor sit amet
+        </div>
+        <div class="col-md-5">
+            <div style="text-align:center">
+                <br>
+                <img src="img/icons/leaf-green.jpg" height="40" width="40">
+                <img src="img/icons/leaf-green.jpg" height="40" width="40">
+                <img src="img/icons/leaf-white.jpg" height="40" width="40">
+                <img src="img/icons/leaf-white.jpg" height="40" width="40">
+                <img src="img/icons/leaf-white.jpg" height="40" width="40">
+                <h3>Comparativa amb els teus veïns</h3>
+                <img src="img/bar-vecino.png" height="300" width="450">
+                <div style="text-align: center">
+                    <h4>Total : 1300</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
