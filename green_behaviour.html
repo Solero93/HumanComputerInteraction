@@ -7,12 +7,23 @@
 
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <script src="assets/js/bootstrap.min.js"></script>
-
     <script src="assets/js/jquery-ui-1.9.2.custom.min.js"></script>
 
+    <!--Show the first comparison div initially-->
+    <script type="text/javascript">
+        $('.comparison').hide();
+        $('.comparison').eq(0).show();
+    </script>
+
+    <!--When tab clicked, show the corresponding div of comparison-->
     <script type="text/javascript">
         $(document).ready(function() {
-            $("#tabs").tabs();
+            $("#tabs").tabs({
+                activate: function (event, ui) {
+                    $('.comparison').hide();
+                    $('.comparison').eq( ui.newTab.index() ).show();
+                }
+            });
         });
     </script>
 
@@ -20,8 +31,21 @@
 <body>
 <div class="container">
     <div class="row">
-        <div class="col-md-5">
+        <div class="col-md-5" style="text-align:center">
             <h1>Com de verd sóc?</h1>
+            <img src="img/icons/leaf-green.jpg" height="40" width="40">
+            <img src="img/icons/leaf-green.jpg" height="40" width="40">
+            <img src="img/icons/leaf-white.jpg" height="40" width="40">
+            <img src="img/icons/leaf-white.jpg" height="40" width="40">
+            <img src="img/icons/leaf-white.jpg" height="40" width="40">
+        </div>
+        <div class="col-md-5" style="text-align:center">
+            <h1>Consells per estalviar</h1>
+            Hauries de baixar el teu consum en aparells de cuina i intentar reduïr la consumició en general.
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-5" style="text-align:center">
             <div id="tabs">
                 <ul class="nav nav-tabs">
                     <li><a href="#yearly">Anual</a></li>
@@ -43,25 +67,32 @@
                     </div>
                 </div>
                 <div id="daily">
-                    <h3>El teu consum anual en kWh</h3>
+                    <h3>El teu consum diari en kWh</h3>
                     <img src="img/bar-yo.png" height="300" width="450">
                     <div style="text-align: center">
                         <h4>Total : 1400</h4>
                     </div>
                 </div>
             </div>
-            <h1>Consells per estalviar</h1>
-            Hauries de baixar el teu consum en lorem ipsum dolor sit amet
         </div>
-        <div class="col-md-5">
-            <div style="text-align:center">
-                <br>
-                <img src="img/icons/leaf-green.jpg" height="40" width="40">
-                <img src="img/icons/leaf-green.jpg" height="40" width="40">
-                <img src="img/icons/leaf-white.jpg" height="40" width="40">
-                <img src="img/icons/leaf-white.jpg" height="40" width="40">
-                <img src="img/icons/leaf-white.jpg" height="40" width="40">
-                <h3>Comparativa amb els teus veïns</h3>
+        <h1>Comparativa amb els teus veïns</h1>
+        <div class="col-md-5" style="text-align:center">
+            <div class="comparison">
+                <h3>Consum anual dels teus veïns en kWh</h3>
+                <img src="img/bar-vecino.png" height="300" width="450">
+                <div style="text-align: center">
+                    <h4>Total : 1300</h4>
+                </div>
+            </div>
+            <div class="comparison">
+                <h3>Consum mensual dels teus veïns en kWh</h3>
+                <img src="img/bar-vecino.png" height="300" width="450">
+                <div style="text-align: center">
+                    <h4>Total : 1300</h4>
+                </div>
+            </div>
+            <div class="comparison">
+                <h3>Consum diari dels teus veïns en kWh</h3>
                 <img src="img/bar-vecino.png" height="300" width="450">
                 <div style="text-align: center">
                     <h4>Total : 1300</h4>
@@ -69,6 +100,5 @@
             </div>
         </div>
     </div>
-</div>
 </body>
 </html>
