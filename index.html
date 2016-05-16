@@ -63,15 +63,18 @@
             <h5 class="centered">Alice Eco</h5>
 
 
+
                 <li class="mt active"><span id="home" page="home.html"><img src="img/icons/001lighticons-08.png"/>Dashboard Home</span></li>
-                <li class="mt"><span page="bills.html"><img src="img/icons/001lighticons-07.png"/>Mis Facturas</span></li>
+                <li class="mt"><span page="xxx.html"><img src="img/icons/001lighticons-07.png"/>Mis Facturas</span></li>
                 <li class="mt"><span page="modify_electronics.html"><img src="img/icons/001lighticons-04.png"/>Modificar consumo</span></li>
-                <li class="mt"><span page="green_behaviour.html"><img src="img/icons/001lighticons-01.png"/>Mi Casa Verde</span></li>
+                <li class="mt"><span page="template.html"><img src="img/icons/001lighticons-01.png"/>Mi Casa Verde</span></li>
             </ul>
         </div>
 </aside>
         <div id='content-load' class="col-xs-10 col-xs-offset-2" style="height: 90vh; overflow: auto">
         </div>
+
+
     </div>
 
 </div><!-- /.container -->
@@ -98,16 +101,23 @@
         font-size: 1.2em;
         font-weight: bold;
         cursor: pointer;
+        position: relative;
     }
 
     .sidebar ul li:hover {
-        background-color: darkorange;
         color: white;
+        background: #68dff0;
     }
 
     .sidebar .active {
-        background-color: orange;
-        color: white;
+        background: #68dff0;
+        display: block;
+
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        transition: all 0.3s ease;
     }
 
     .sidebar ul li img {
@@ -115,6 +125,32 @@
         width: 48px;
         height: 48px;
     }
+
+    ul.sidebar-menu li{
+        /*line-height: 20px !important;*/
+        margin-bottom: 5px;
+        margin-left:10px;
+        margin-right:10px;
+    }
+
+    .sidebar h5 {
+        color: #f2f2f2;
+        font-weight: 700;
+    }
+
+    .sidebar span{
+        color:white;
+        text-decoration: none;
+        display: block;
+        font-size: 12px;
+        outline: none;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+
 
 </style>
 
