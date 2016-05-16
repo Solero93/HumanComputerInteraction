@@ -10,14 +10,10 @@ var nevera_rect;
 var televisio_rect;
 var llums_rect;
 
-var fornStatus = false;
-var televisioStatus = false;
-var llumsStatus = false;
-var neveraStatus = false;
-var rentadoraStatus = false;
-
+var info_div;
 
 $('document').ready(function () {
+    console.log($.fn.jquery);
     //alert("Document loaded, including graphics and embedded documents (like SVG)");
     rentadora = $("#rentadora");
     forn = $("#forn");
@@ -30,14 +26,32 @@ $('document').ready(function () {
     nevera_rect = $("#nevera_rect");
     televisio_rect = $("#televisio_rect");
     llums_rect = $("#llums_rect");
-    
-    /* We assume the user has created the home for now
-    rentadora.hide();
-    forn.hide();
-    nevera.hide();
-    televisio.hide();
-    llums.hide();
-    */
+    $(".selectable").click(function (event) {
+        display_info("#" + $(this).attr("id"));
+    });
+
+    info_div = $("#electronics_info");
     
 });
+
+function display_info(electronics_rect) {
+    var previous_device = info_div.data("device");
+    // Parche mu cutre, lo se, pero todos los aparatos acaban con '_rect'
+    var electronics_id = electronics_rect.substring(0, electronics_rect.length - 5);
+    if (previous_device === electronics_id) {
+        return;
+    }
+    if (previous_device !== undefined) {
+        $(previous_device).toggleClass("selected");
+    } else {
+        $("#default_screen").hide();
+    }
+    console.log(electronics_rect + " " + electronics_id);
+    $(electronics_rect).toggleClass("selected");
+    console.log($(electronics_rect).attr("class"));
+    // Guardamos el id para futuro uso en caso que el usuario seleccione algo más
+    info_div.data("device", electronics_id);
+    var device = $(electronics_id);
+
+}
 
