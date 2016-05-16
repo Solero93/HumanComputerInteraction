@@ -326,3 +326,11 @@
 .center {
     text-align: center;
 }
+
+.selectable {
+    opacity: 0;
+}
+
+.selectable:hover {
+    opacity: 0.5;
+}

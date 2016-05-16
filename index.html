@@ -14,6 +14,9 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/style-responsive.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -23,7 +26,7 @@
 </head>
 
 <body>
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<nav class="navbar navbar-inverse navbar-fixed-top black-bg header">
     <div class="container-fluid">
 
         <div class="navbar-header">
@@ -33,7 +36,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Webapp Consumo Hogar</a>
+            <a class="logo" href="#">SUPERELECTRICHOUSE</a>
         </div>
 
         <!--
@@ -52,17 +55,22 @@
 <div class="container-fluid" style="margin-top: 50px">
 
     <div class="row">
+        <aside>
 
-        <div id='load-buttons' class="col-xs-2 sidebar">
+        <div id='load-buttons' class="sidebar">
+            <ul class="sidebar-menu" id="nav">
+            <p class="centered"><img src="assets/img/ui-sam.jpg" class="img-circle" width="60"></p>
+            <h5 class="centered">Alice Eco</h5>
 
-            <ul>
-                <li><span id="home" page="home.html"><img src="img/icons/001lighticons-08.png"/>Dashboard Home</span></li>
-                <li><span page="xxx.html"><img src="img/icons/001lighticons-07.png"/>Mis Facturas</span></li>
-                <li><span page="xxx.html"><img src="img/icons/001lighticons-04.png"/>Otros</span></li>
-                <li><span page="template.html"><img src="img/icons/001lighticons-01.png"/>Mi Casa Verde</span></li>
+
+
+                <li class="mt active"><span id="home" page="home.html"><img src="img/icons/001lighticons-08.png"/>Dashboard Home</span></li>
+                <li class="mt"><span page="xxx.html"><img src="img/icons/001lighticons-07.png"/>Mis Facturas</span></li>
+                <li class="mt"><span page="modify_electronics.html"><img src="img/icons/001lighticons-04.png"/>Modificar consumo</span></li>
+                <li class="mt">><span page="template.html"><img src="img/icons/001lighticons-01.png"/>Mi Casa Verde</span></li>
             </ul>
         </div>
-
+</aside>
         <div id='content-load' class="col-xs-10 col-xs-offset-2" style="height: 90vh; overflow: auto">
         </div>
 
@@ -75,18 +83,10 @@
 <style type="text/css">
 
     .sidebar {
-        padding: 65px 0px;
-        position: absolute;
-        left: 0px;
-        top: 0px;
-
-        text-align: left;
-
-        background-color: white;
-        box-shadow: 2px 0px 5px gray;
-
-        height: 100vh;
-        overflow: hidden;
+        width: 210px;
+        height: 100%;
+        position: fixed;
+        background: #424a5d;;
     }
 
     .sidebar ul {
