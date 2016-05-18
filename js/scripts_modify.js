@@ -42,12 +42,12 @@ function display_info(electronics_rect) {
         return;
     }
     if (previous_device !== undefined) {
-        $(previous_device).toggleClass("selected");
+        $(previous_device + "_rect").removeClass("selected").addClass("selectable");
     } else {
         $("#default_screen").hide();
     }
     console.log(electronics_rect + " " + electronics_id);
-    $(electronics_rect).toggleClass("selected");
+    $(electronics_rect).addClass("selected").removeClass("selectable");
     console.log($(electronics_rect).attr("class"));
     // Guardamos el id para futuro uso en caso que el usuario seleccione algo más
     info_div.data("device", electronics_id);
