@@ -13,7 +13,6 @@ var llums_rect;
 var info_div;
 
 $('document').ready(function () {
-    console.log($.fn.jquery);
     //alert("Document loaded, including graphics and embedded documents (like SVG)");
     rentadora = $("#rentadora");
     forn = $("#forn");
@@ -31,6 +30,21 @@ $('document').ready(function () {
     });
 
     info_div = $("#electronics_info");
+    info_div.hide();
+
+    // Sliders setup
+    $("#day_usage_slider").slider({
+        orientation: "vertical",
+        value: 0,
+        min: 0,
+        max: 3
+    });
+    $("#night_usage_slider").slider({
+        orientation: "vertical",
+        value: 2,
+        min: 0,
+        max: 3
+    });
     
 });
 
@@ -42,6 +56,7 @@ function display_info(electronics_rect) {
         return;
     }
     if (previous_device !== undefined) {
+        // TODO: Guardar datos
         $(previous_device + "_rect").removeClass("selected").addClass("selectable");
     } else {
         $("#default_screen").hide();
@@ -52,6 +67,14 @@ function display_info(electronics_rect) {
     // Guardamos el id para futuro uso en caso que el usuario seleccione algo más
     info_div.data("device", electronics_id);
     var device = $(electronics_id);
-
+    var name = device.data("name");
+    var consumption_rate = device.data("consumption_rate");
+    var day_usage = device.data("day_usage");
+    var night_usage = device.data("night_usage");
+    $("#device_name").text(name);
+    $("#consumption_rate").text("~" + consumption_rate + "kWh");
+    //$("#day_usage_slider").slider("value", day_usage);
+    //$("#night_usage_slider").slider("value", night_usage);
+    info_div.show();
 }
 
