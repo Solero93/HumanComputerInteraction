@@ -4,12 +4,6 @@ var nevera;
 var televisio;
 var llums;
 
-var rentadora_rect;
-var forn_rect;
-var nevera_rect;
-var televisio_rect;
-var llums_rect;
-
 var info_div;
 
 $('document').ready(function () {
@@ -19,33 +13,28 @@ $('document').ready(function () {
     nevera = $("#nevera");
     televisio = $("#televisio");
     llums = $("#llums");
-
-    rentadora_rect = $("#rentadora_rect");
-    forn_rect = $("#forn_rect");
-    nevera_rect = $("#nevera_rect");
-    televisio_rect = $("#televisio_rect");
-    llums_rect = $("#llums_rect");
     $(".selectable").click(function (event) {
         display_info("#" + $(this).attr("id"));
     });
 
     info_div = $("#electronics_info");
-    info_div.hide();
 
     // Sliders setup
-    $("#day_usage_slider").slider({
+    var slider = $("#day_usage_slider").slider({
         orientation: "vertical",
-        value: 0,
+        value: 1,
         min: 0,
         max: 3
     });
+
     $("#night_usage_slider").slider({
         orientation: "vertical",
         value: 2,
         min: 0,
         max: 3
     });
-    
+
+    $("#default_screen").hide();
 });
 
 function display_info(electronics_rect) {
@@ -61,9 +50,7 @@ function display_info(electronics_rect) {
     } else {
         $("#default_screen").hide();
     }
-    console.log(electronics_rect + " " + electronics_id);
     $(electronics_rect).addClass("selected").removeClass("selectable");
-    console.log($(electronics_rect).attr("class"));
     // Guardamos el id para futuro uso en caso que el usuario seleccione algo más
     info_div.data("device", electronics_id);
     var device = $(electronics_id);

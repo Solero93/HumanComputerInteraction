@@ -4,6 +4,27 @@
     color: black;
 }
 
+#options {
+    float: left;
+    width: 34%;
+    padding-top: 38px;
+    padding-bottom: 20px;
+
+}
+
+#option_list {
+    position: relative;
+    height: 100px;
+}
+
+#option_list > label {
+    position: absolute;
+    text-align: center;
+    margin: 0 auto -1ex;
+    right: 0;
+    left: 0;
+}
+
 .slider_title {
     text-align: center;
     font-weight: bold;
