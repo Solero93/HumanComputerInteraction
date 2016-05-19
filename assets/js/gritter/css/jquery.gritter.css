@@ -47,8 +47,9 @@
 	background:url(../images/gritter.png) no-repeat left -40px;
 	color:#eee;
 	padding:2px 11px 8px 11px;
-	font-size: 11px;
+	font-size: 14px;
 	font-family:verdana;
+	text-align: center;
 }
 .hover .gritter-item {
 	background-position:right -40px;
@@ -70,16 +71,16 @@
 	text-indent:-9999em;
 }
 .gritter-title {
-	font-size:14px;
+	font-size:16px;
 	font-weight:bold;
 	padding:0 0 7px 0;
 	display:block;
 	text-shadow:1px 1px 0 #000; /* Not supported by IE :( */
 }
 .gritter-image {
-	width:48px;
-	height:48px;
-	float:left;
+	width: 60%;
+	horiz-align: center;
+	float: none;
 }
 .gritter-with-image,
 .gritter-without-image {
@@ -87,7 +88,7 @@
 }
 .gritter-with-image {
 	width:220px;
-	float:right;
+	float: none;
 }
 /* for the light (white) version of the gritter notice */
 .gritter-light .gritter-item,
