@@ -3,7 +3,6 @@
 	Description: Page where the user can modify the electric consumption of anything
 -->
 <link href="css/modify_electronics.css" rel="stylesheet">
-<link href="css/jquery-ui.css" rel="stylesheet">
 <div class="row jordi" style="text-align: center; max-height: 90vh">
     <div class="col-xs-8">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" style="enable-background:new 0 0 800 800;version:1">
@@ -800,54 +799,11 @@
             </g>
         </svg>
     </div>
-    <div class="col-xs-4 info_box" id="electronics_info" style="display:flex;justify-content:center;align-items:center;">
+    <div class="col-xs-4" id="electronics_info" style="display:flex;justify-content:center;align-items:center;">
         <div id="default_screen" style="display:flex;justify-content:center;align-items:center;">
-            Selecciona un electrodomèstic i veuràs la seva informació!
+            Rellename Huapo
         </div>
-        <div id="info_screen">
-            <h1 id="device_name" class="label">Rentadora</h1>
-            <br>
-            <div>
-                <p style="float: left; font-size: small;font-weight: bold;">Consum per hora </p>
-                <p id="consumption_rate" class="consumption_rate">~55 kWh</p>
-            </div>
-            <div id="device_usage" style="clear: both">
-                <h2 style="text-align: center; font-weight: bolder">Ús de l'aparell</h2>
-                <div id="day_usage" style="float: left; align-items: center; width: 33%;">
-                    <div class="slider_title">Dia</div>
-                    <div class="slider">
-                        <div id="day_usage_slider"></div>
-                    </div>
-                </div>
-                <div id="options">
-                    <div id="option_list">
-                        <label style="bottom: 0"> Queso </label>
-                        <label style="bottom: 33%"> Pene </label>
-                        <label style="bottom: 66%"> Pene </label>
-                        <label style="bottom: 100%"> Pene </label>
-                    </div>
-                </div>
-                <div id="night_usage" style="float: right; width: 33%;">
-                    <div class="slider_title">Nit</div>
-                    <div class="slider">
-                        <div id="night_usage_slider"></div>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <div style="clear: both">
-                <p style="float: left; font-size: small;font-weight: bold; width: 50%; text-align: left">Consum estimat al mes </p>
-                <p id="monthly_usage" style="float: right; width: 50%; text-align: right; font-weight: bolder">~300 kWh</p>
-            </div>
-            <br>
-            <div style="clear: both">
-                <h4 style="text-align: left">Consells d'estalvi</h4>
-                <div style="text-align: left">
-                    pene pene pene pene pene pene pene pene pene penepenepene
-                </div>
-            </div>
-        </div>
+        <div id="info_screen"></div>
     </div>
 </div>
-<script src="js/jquery-ui.js"></script>
 <script src="js/scripts_modify.js"></script>
