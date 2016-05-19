@@ -77,9 +77,7 @@ $('document').ready(function () {
         $(this).val(null);
     }).focusin(function () {
         var value = $(this).attr('placeholder');
-        console.log(value);
         value = value.substr(1, value.length - 4);
-        console.log(value);
         $(this).val(value);
     });
     info_div.hide();
@@ -97,7 +95,8 @@ function display_info(electronics_rect) {
         // Save the data
         day_usage = day_slider.slider('value');
         night_usage = night_slider.slider('value');
-        consumption_rate = consumption_rate_input.val();
+        consumption_rate = consumption_rate_input.attr('placeholder');
+        consumption_rate = consumption_rate.substr(1, consumption_rate.length - 4);
         $(previous_device).data({"day_usage": day_usage, "night_usage": night_usage, "consumption_rate": consumption_rate});
 
         $(previous_device + "_rect").removeClass("selected").addClass("selectable");
