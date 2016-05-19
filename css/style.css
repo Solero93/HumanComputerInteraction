@@ -5,13 +5,13 @@
     display: flex;
     align-items: center;
 }
-.casa{
-    position: fixed;
-    top: 50px;
-    right: 50px;
-    width: 60%;
 
+.casa{
+    left: 15%;
+    width: 50%;
 }
+
+
 .a {
     fill: #FFFDFA;
     stroke-linecap: round;
