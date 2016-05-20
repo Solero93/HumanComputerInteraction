@@ -79,6 +79,10 @@ $('document').ready(function () {
         var value = $(this).attr('placeholder');
         value = value.substr(1, value.length - 4);
         $(this).val(value);
+    }).keypress(function (event) {
+        if (event.which == 13) {
+            $(this).blur();
+        }
     });
     info_div.hide();
 });
