@@ -72,6 +72,7 @@ $('document').ready(function () {
         max: 3
     });
 
+    // Consumption rate input box setup
     consumption_rate_input = $("#consumption_rate");
     consumption_rate_input.focusout(function () {
         var value = $(this).val();
@@ -80,7 +81,7 @@ $('document').ready(function () {
     }).focusin(function () {
         var value = $(this).attr('placeholder');
         value = value.substr(1, value.length - 4);
-        $(this).val(value);
+        $(this).val(value).select();
     }).keypress(function (event) {
         if (event.which == 13) {
             $(this).blur();
