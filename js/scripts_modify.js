@@ -91,6 +91,7 @@ function display_info(electronics_rect) {
     if (previous_device === electronics_id) {
         return;
     }
+    // In the case where we already are editing/viewing an object
     if (previous_device !== undefined) {
         // Save the data
         day_usage = day_slider.slider('value');
@@ -98,8 +99,9 @@ function display_info(electronics_rect) {
         consumption_rate = consumption_rate_input.attr('placeholder');
         consumption_rate = consumption_rate.substr(1, consumption_rate.length - 4);
         $(previous_device).data({"day_usage": day_usage, "night_usage": night_usage, "consumption_rate": consumption_rate});
-
+        // Deselect the device
         $(previous_device + "_rect").removeClass("selected").addClass("selectable");
+    // Otherwise, we replace the column with the info screen
     } else {
         $("#default_screen").hide();
     }
