@@ -52,7 +52,7 @@
     </div>
 </nav>
 
-<div class="container-fluid" style="margin-top: 50px">
+<div id="main-page" class="container-fluid">
 
     <div class="row">
         <aside>
@@ -71,7 +71,7 @@
             </ul>
         </div>
 </aside>
-        <div id='content-load' class="col-xs-10 col-xs-offset-2" style="height: 90vh; overflow: auto">
+        <div id='content-load' class="col-xs-10 col-xs-offset-2" style="height: 90vh; overflow: auto; margin-top: 1em">
         </div>
 
 
@@ -194,6 +194,14 @@
     }());
 
 
+</script>
+
+<script type="application/javascript">
+    $(document).ready(function () {
+        var height = $("nav").height();
+        $("#main-page").css('margin-top', height + 'px');
+
+    })
 </script>
 </body>
 </html>
