@@ -38,7 +38,7 @@
     align-items:center;
 }
 
-.consumption_rate {
+#consumption_rate {
     border: 1px solid black;
     font-weight: bold;
     text-align: right;
@@ -47,13 +47,16 @@
     padding-right: 3px;
 }
 
-.consumption_rate:hover {
+#consumption_rate:hover {
     background-color: lightgrey;
 }
 
-.info_box {
+#electronics_info {
     background-color: white;
     border: 2px solid lightgrey;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
 .selectable {
