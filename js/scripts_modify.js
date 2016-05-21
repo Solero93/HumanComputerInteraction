@@ -19,7 +19,9 @@ $('document').ready(function () {
         display_info("#" + $(this).attr("id"));
     });
 
-    info_div = $("#electronics_info");
+    var height = $("#house").height();
+    $("#electronics_info").css('min-height', height*0.66 + 'px');
+    info_div = $("#info_screen");
 
     // Default info
     rentadora.data({
@@ -70,6 +72,7 @@ $('document').ready(function () {
         max: 3
     });
 
+    // Consumption rate input box setup
     consumption_rate_input = $("#consumption_rate");
     consumption_rate_input.focusout(function () {
         var value = $(this).val();
@@ -78,7 +81,11 @@ $('document').ready(function () {
     }).focusin(function () {
         var value = $(this).attr('placeholder');
         value = value.substr(1, value.length - 4);
-        $(this).val(value);
+        $(this).val(value).select();
+    }).keypress(function (event) {
+        if (event.which == 13) {
+            $(this).blur();
+        }
     });
     info_div.hide();
 });
@@ -91,6 +98,7 @@ function display_info(electronics_rect) {
     if (previous_device === electronics_id) {
         return;
     }
+    // In the case where we already are editing/viewing an object
     if (previous_device !== undefined) {
         // Save the data
         day_usage = day_slider.slider('value');
@@ -98,8 +106,9 @@ function display_info(electronics_rect) {
         consumption_rate = consumption_rate_input.attr('placeholder');
         consumption_rate = consumption_rate.substr(1, consumption_rate.length - 4);
         $(previous_device).data({"day_usage": day_usage, "night_usage": night_usage, "consumption_rate": consumption_rate});
-
+        // Deselect the device
         $(previous_device + "_rect").removeClass("selected").addClass("selectable");
+    // Otherwise, we replace the column with the info screen
     } else {
         $("#default_screen").hide();
     }
