@@ -2704,6 +2704,7 @@ select[multiple].input-lg {
     padding-top: 7px;
     margin-bottom: 0;
     text-align: right;
+
   }
 }
 .form-horizontal .has-feedback .form-control-feedback {
@@ -3053,6 +3054,7 @@ fieldset[disabled] .btn-link:focus {
   font-size: 18px;
   line-height: 1.33;
   border-radius: 6px;
+
 }
 .btn-sm,
 .btn-group-sm > .btn {

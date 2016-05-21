@@ -10,6 +10,11 @@
     left: 15%;
     width: 50%;
 }
+.save{
+    left: 15%;
+    width: 50%;
+    margin-top: 90px;
+}
 
 
 .a {
@@ -260,7 +265,7 @@
 
 .slider-wrap {
     position: relative;
-    margin: 0px auto;
+    margin: 0 auto;
     width: 300px;
 }
 
