@@ -55,9 +55,7 @@
 <div id="main-page" class="container-fluid">
 
     <div class="row">
-        <aside>
-
-        <div id='load-buttons' class="sidebar">
+        <div id='load-buttons' class="sidebar affix">
             <ul class="sidebar-menu" id="nav">
             <p class="centered"><img src="img/perfil.jpg" class="img-circle" width="60"></p>
             <h5 class="centered">Alice Eco</h5>
@@ -70,8 +68,9 @@
                 <li class="mt"><span page="green_behaviour.html"><img src="img/icons/001lighticons-01.png"/>Mi Casa Verde</span></li>
             </ul>
         </div>
-</aside>
-        <div id='content-load' class="col-xs-10 col-xs-offset-2" style="height: 90vh; overflow: auto; margin-top: 1em">
+        <div class="col-xs-offset-2" style="padding-top: 1em; padding-right: 2ex;">
+            <div id='content-load'>
+            </div>
         </div>
 
 
@@ -83,9 +82,10 @@
 <style type="text/css">
 
     .sidebar {
-        width: 210px;
         height: 100%;
-        position: fixed;
+        /* col-xs-2 but modified */
+        float: left;
+        width: 16.66666667%;
         background: #424a5d;;
     }
 

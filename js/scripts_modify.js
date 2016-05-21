@@ -18,9 +18,7 @@ $('document').ready(function () {
     $(".selectable").click(function (event) {
         display_info("#" + $(this).attr("id"));
     });
-
-    var height = $("#house").height();
-    $("#electronics_info").css('min-height', height*0.66 + 'px');
+    
     info_div = $("#info_screen");
 
     // Default info
