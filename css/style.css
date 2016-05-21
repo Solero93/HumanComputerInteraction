@@ -7,8 +7,10 @@
 }
 
 .casa{
-    left: 15%;
-    width: 50%;
+    /* col-xs-offset-2 lookalike */
+    left: 16.6666666%;
+    /* Looks good for me :3 */
+    width: 42%;
 }
 .save{
     left: 15%;
