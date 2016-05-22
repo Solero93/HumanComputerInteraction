@@ -702,3 +702,45 @@ function drop_ordinador(e) {
         ordinadorStatus = !ordinadorStatus;
     }
 }
+
+function onChangeNum(ele){
+
+    var x = document.getElementById(ele).value;
+    if(!parseInt(x)){
+        switch(ele){
+            case("rentadora_num"):
+                rentadora.hide();
+                break;
+            case("forn_num"):
+                forn.hide();
+                break;
+            case("nevera_num"):
+                nevera.hide();
+                break;
+            case("ordinador_num"):
+                ordinador.hide();
+                break;
+            case("extractor_num"):
+                extractor.hide();
+                break;
+            case("televisio_num"):
+                televisio.hide();
+                break;
+            case("aire_num"):
+                aire.hide();
+                break;
+            case("microones_num"):
+                microones.hide();
+                break;
+            case("ventilador_num"):
+                ventilador.hide();
+                break;
+        }
+
+    }
+
+
+
+}
+
+
