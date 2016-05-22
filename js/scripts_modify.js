@@ -70,6 +70,14 @@ $('document').ready(function () {
         max: 3
     });
 
+    $("#close_button").click(function (event) {
+        info_div.hide();
+        $('#default_screen').show();
+        var previous_device = info_div.data("device") + '_rect';
+        $(previous_device).addClass('selectable').removeClass('selected');
+        info_div.data("device", null);
+    });
+
     $("#save_button").click(function () {
         var confirmation = $("#confirmation");
         confirmation.show();
@@ -92,6 +100,7 @@ $('document').ready(function () {
     });
 
     $("#confirmation").hide();
+    info_div.data("device", null);
     info_div.hide();
 });
 
@@ -104,7 +113,7 @@ function display_info(electronics_rect) {
         return;
     }
     // In the case where we already are editing/viewing an object
-    if (previous_device !== undefined) {
+    if (previous_device !== null) {
         // Save the data
         day_usage = day_slider.slider('value');
         night_usage = night_slider.slider('value');
