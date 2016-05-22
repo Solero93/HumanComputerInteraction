@@ -372,6 +372,7 @@ function drop(e) {
             plantxa_rect.hide();
 
     }
+    alert("Recorda que per inserir un objecte l'has de deixar anar sobre la zona il·luminada!");
 }
 
 function drop_televisio(e) {
