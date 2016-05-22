@@ -40,6 +40,8 @@
 
 #consumption_rate {
     border: 1px solid black;
+    border-bottom-width: 2px;
+    border-right-width: 2px;
     font-weight: bold;
     text-align: right;
     float:right;
