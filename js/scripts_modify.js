@@ -70,6 +70,11 @@ $('document').ready(function () {
         max: 3
     });
 
+    $("#save_button").click(function () {
+        var confirmation = $("#confirmation");
+        confirmation.show();
+        confirmation.fadeOut(5000);
+    });
     // Consumption rate input box setup
     consumption_rate_input = $("#consumption_rate");
     consumption_rate_input.focusout(function () {
@@ -85,6 +90,8 @@ $('document').ready(function () {
             $(this).blur();
         }
     });
+
+    $("#confirmation").hide();
     info_div.hide();
 });
 
