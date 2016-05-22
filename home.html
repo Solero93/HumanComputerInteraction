@@ -44,9 +44,11 @@
                             <body xmlns="http://www.w3.org/1999/xhtml">
 
                             <p>
-                                Nº:
-                                <select id="forn_number">
-                                    <option value="1">1</option>
+                                <label for="rentadora_num">No.</label> Nº:
+                                <select id="rentadora_num" onchange="onChangeNum(this.id)">
+
+                                    <option value="0">0</option>
+                                    <option value="1" selected >1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
                                     <option value="4">4</option>
@@ -226,7 +228,7 @@
 
                             <p>
                                 Nº:
-                                <select id="forn_number">
+                                <select id="llum_num">
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -260,20 +262,7 @@
                         <g opacity=".3" clip-path="url(#XMLID_2_)" fill="#FCF5F1">
                             <path d="M356.11 523.745l-71.139 61.706-1.763-1.799 71.139-61.707zM362.465 523.204l-71.14 61.706-.825-.842 71.14-61.707z"/>
 
-                            <foreignObject x="500" y="400" width="200" height="150">
-                                <body xmlns="http://www.w3.org/1999/xhtml">
 
-                                <p>
-                                    Nº:
-                                    <select id="forn_number">
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                    </select>
-                                </p>
-                                </body>
-                            </foreignObject>
                         </g>
                         <path d="M332.897 589.185c-.12-.559-.644-.979-1.274-.979h-18.207c-.629 0-1.154.42-1.274.979h20.755z" fill="#DBDEDC"/>
                         <g>
@@ -286,7 +275,23 @@
                         <path fill="#302A34" d="M273.235 589.027h1.738v13.53h-1.738zM322.779 589.027h1.738v8.4h-1.738z"/>
                         <path fill="#302A34" d="M273.78 589.027h102.222v1.636H273.78zM273.78 595.792h102.222v1.635H273.78z"/>
                         <path fill="#302A34" d="M374.264 589.027h1.738v13.53h-1.738zM292 593h9v1h-9zM348 593h8v1h-8z"/>
+                        <foreignObject x="200" y="500" width="200" height="150">
+                            <body xmlns="http://www.w3.org/1999/xhtml">
+
+                            <p>
+                                Nº:
+                                <select id="televisio_num" onchange="onChangeNum(this.id)">
+                                    <option value="0">0</option>
+                                    <option value="1" selected>1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </p>
+                            </body>
+                        </foreignObject>
                     </g>
+
                 </g>
                 <g id="cuina">
                     <path d="M698.179 670.277h2.816v-20.779h-2.816c-1.33 0-2.409 1.078-2.409 2.409v15.962c.001 1.329 1.079 2.408 2.409 2.408zM667.2 683.54h32.51v-6.459h-27.895c-2.548 0-4.615 2.066-4.615 4.615v1.844z" fill="#0097A7"/>
@@ -307,8 +312,9 @@
 
                             <p>
                                 Nº:
-                                <select id="forn_number">
-                                    <option value="1">1</option>
+                                <select id="nevera_num" onchange="onChangeNum(this.id)">
+                                    <option value="0">0</option>
+                                    <option value="1" selected>1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
                                     <option value="4">4</option>
@@ -341,8 +347,9 @@
 
                             <p>
                                 Nº:
-                                <select id="forn_number">
-                                    <option value="1">1</option>
+                                <select id="forn_num" onchange="onChangeNum(this.id)">
+                                    <option value="0">0</option>
+                                    <option value="1" selected>1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
                                     <option value="4">4</option>
@@ -410,8 +417,9 @@
 
                             <p>
                                 Nº:
-                                <select id="forn_number">
-                                    <option value="1">1</option>
+                                <select id="extractor_num" onchange="onChangeNum(this.id)">
+                                    <option value="0">0</option>
+                                    <option value="1" selected>1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
                                     <option value="4">4</option>
@@ -435,8 +443,9 @@
 
                             <p>
                                 Nº:
-                                <select id="forn_number">
-                                    <option value="1">1</option>
+                                <select id="microones_num" onchange="onChangeNum(this.id)">
+                                    <option value="0">0</option>
+                                    <option value="1" selected>1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
                                     <option value="4">4</option>
@@ -509,8 +518,9 @@
 
                         <p>
                             Nº:
-                            <select id="forn_number">
-                                <option value="1">1</option>
+                            <select id="ventilador_num" onchange="onChangeNum(this.id)">
+                                <option value="0">0</option>
+                                <option value="1" selected>1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
                                 <option value="4">4</option>
@@ -550,8 +560,9 @@
 
                         <p>
                             Nº:
-                            <select id="forn_number">
-                                <option value="1">1</option>
+                            <select id="aire_num" onchange="onChangeNum(this.id)">
+                                <option value="0">0</option>
+                                <option value="1" selected>1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
                                 <option value="4">4</option>
@@ -695,9 +706,9 @@
 
                             <p>
                                 Nº:
-                                <select id="forn_number">
+                                <select id="ordinador_num" onchange="onChangeNum(this.id)">
                                     <option value="0">0</option>
-                                    <option value="1">1</option>
+                                    <option value="1" selected>1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
                                     <option value="4">4</option>
