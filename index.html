@@ -14,7 +14,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="assets/js/gritter/css/jquery.gritter.css" />
+    <link rel="stylesheet" type="text/css" href="assets/js/gritter/css/jquery.gritter.css"/>
     <link rel="stylesheet" type="text/css" href="assets/lineicons/style.css">
     <!-- Custom styles for this template -->
     <link href="assets/css/style.css" rel="stylesheet">
@@ -28,39 +28,23 @@
 </head>
 
 <body>
-<nav class="navbar navbar-inverse navbar-fixed-top black-bg header">
+
+<nav class="navbar navbar-yellow navbar-fixed-top">
     <div class="container-fluid">
-
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="logo" href="#">SUPERELECTRICHOUSE</a>
+        <div class="nav-header">
+            <a class="navbar-logo" href="#">SUPER.ELECTRIC.HOUSE</a>
         </div>
-
-        <!--
-        <div id="navbar" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-        -->
-
     </div>
 </nav>
+
 
 <div id="main-page" class="container-fluid">
 
     <div class="row">
         <div id='load-buttons' class="sidebar affix">
             <ul class="sidebar-menu" id="nav">
-            <p class="centered"><img src="img/perfil.jpg" class="img-circle" width="60"></p>
-            <h5 class="centered">Alice Eco</h5>
+                <p class="centered"><img src="img/perfil.jpg" class="img-circle" width="60"></p>
+                <h5 class="centered">Alice Eco</h5>
                 <li class="mt active"><span id="home" page="home.html"><img src="img/icons/001lighticons-08.png"/>Dashboard Home</span></li>
                 <li class="mt"><span page="bills.html"><img src="img/icons/001lighticons-07.png"/>Mis Facturas</span></li>
                 <li class="mt"><span page="modify_electronics.html"><img src="img/icons/001lighticons-04.png"/>Modificar consumo</span></li>
@@ -125,11 +109,11 @@
         height: 48px;
     }
 
-    ul.sidebar-menu li{
+    ul.sidebar-menu li {
         /*line-height: 20px !important;*/
         margin-bottom: 5px;
-        margin-left:10px;
-        margin-right:10px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
     .sidebar h5 {
@@ -137,8 +121,8 @@
         font-weight: 700;
     }
 
-    .sidebar span{
-        color:white;
+    .sidebar span {
+        color: white;
         text-decoration: none;
         display: block;
         font-size: 12px;
@@ -179,10 +163,10 @@
 
         $('#load-buttons li').click(function (event) {
 
-            if($(event.currentTarget).find('span').attr("id") != "home")
-            {
+            if ($(event.currentTarget).find('span').attr("id") != "home") {
                 $("#gritter-notice-wrapper").hide();
             }
+
             var page = $(event.currentTarget).find('span').attr("page");
             var loadDiv = $('#content-load');
 
