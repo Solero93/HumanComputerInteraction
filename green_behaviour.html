@@ -1,105 +1,378 @@
-<!-- Green behaviour tab -->
+<div id="green-behavior">
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link href="css/jquery-ui.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="assets/js/gritter/css/jquery.gritter.css" />
-    <link rel="stylesheet" type="text/css" href="assets/lineicons/style.css">
-    <script src="js/jquery-ui.js"></script>
-
-    <!--Show the first comparison div initially-->
-    <script type="text/javascript">
-        $('.comparison').hide();
-        $('.comparison').eq(0).show();
-    </script>
-
-    <!--When tab clicked, show the corresponding div of comparison-->
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $("#tabs").tabs({
-                activate: function (event, ui) {
-                    $('.comparison').hide();
-                    $('.comparison').eq( ui.newTab.index() ).show();
-                }
-            });
-        });
-    </script>
-
-</head>
-<body>
-<div class="container">
     <div class="row">
-        <div class="col-md-5" style="text-align:center">
+        <div class="col-md-6 col-xs-12">
             <h1>Com de verd sóc?</h1>
-            <img src="img/icons/leaf-green.jpg" height="40" width="40">
-            <img src="img/icons/leaf-green.jpg" height="40" width="40">
-            <img src="img/icons/leaf-white.jpg" height="40" width="40">
-            <img src="img/icons/leaf-white.jpg" height="40" width="40">
-            <img src="img/icons/leaf-white.jpg" height="40" width="40">
+            <img src="img/leaf.png" width="40">
+            <img src="img/leaf.png" width="40">
+            <img src="img/leaf.png" width="40">
+            <img src="img/leaf_white.png" width="40">
+            <img src="img/leaf_white.png" width="40">
         </div>
-        <div class="col-md-5" style="text-align:center">
+        <div class="col-md-6 col-xs-12">
             <h1>Consells per estalviar</h1>
-            Hauries de baixar el teu consum en aparells de cuina i intentar reduïr la consumició en general.
+            <h4>El teu consum a la cuina es molt elevat, molt superior a la mitjana. Intenta reduir
+                l'us d'electrodomestics. Per contra, el teu consum al labavo i al bany es molt bó.<br>
+                <br>
+                En relació als teus veins, en general gastes més que la majoria de gent al teu voltant
+                al cap de l'any.<h4>
         </div>
     </div>
+
+    <br/>
+
     <div class="row">
-        <div class="col-md-5" style="text-align:center">
-            <div id="tabs">
-                <ul class="nav nav-tabs">
-                    <li><a href="#yearly">Anual</a></li>
-                    <li><a href="#monthly">Mensual</a></li>
-                    <li><a href="#daily">Diari</a></li>
-                </ul>
-                <div id="yearly">
-                    <h3>El teu consum anual en kWh</h3>
-                    <img src="img/bar-yo.png" height="300" width="450">
-                    <div style="text-align: center">
-                        <h4>Total : 1400</h4>
-                    </div>
+
+        <div class="col-md-6 col-xs-12">
+
+            <div id="graph-group-period" style="padding: 0px 32px">
+                <h1>Consum per Periode de Temps</h1>
+
+                <h4>
+                    Els seguents grafics comparen el teu absolut per habitació i per periode de temps.
+                </h4>
+
+                <div class="tab-nav">
+                    <span class="active" show="daily">Consum Diari</span>
+                    <span show="monthly">Consum Mensual</span>
+                    <span show="yearly">Consum Anual</span>
                 </div>
-                <div id="monthly">
-                    <h3>El teu consum mensual en kWh</h3>
-                    <img src="img/bar-yo.png" height="300" width="450">
-                    <div style="text-align: center">
-                        <h4>Total : 1400</h4>
+                <br/>
+                <div class="graph" id="daily">
+                    <div class="axis-y">
+                        <span>Bany</span>
+                        <span>Cuina</span>
+                        <span>Menjador</span>
+                        <span>Lavabo</span>
+                        <span>Sala</span>
                     </div>
-                </div>
-                <div id="daily">
-                    <h3>El teu consum diari en kWh</h3>
-                    <img src="img/bar-yo.png" height="300" width="450">
-                    <div style="text-align: center">
-                        <h4>Total : 1400</h4>
+                    <div class="bar-container">
+                        <div class="bar bar-green" style="width: 30%">160KWh</div>
+                        <div class="bar bar-red" style="width: 85%">450KWh</div>
+                        <div class="bar bar-orange" style="width: 70%">385KWh</div>
+                        <div class="bar bar-green" style="width: 35%">194KWh</div>
+                        <div class="bar bar-yellow" style="width: 55%">289KWh</div>
                     </div>
-                </div>
+                    <div class="clear"></div>
+                    <div class="axis-x">
+                        <span>0</span>
+                        <span>100</span>
+                        <span>200</span>
+                        <span>300</span>
+                        <span>400</span>
+                        <span>KWh</span>
+                    </div>
+                </div> <!-- /Graph -->
+                <div class="graph" style="display: none" id="monthly">
+                    <div class="axis-y">
+                        <span>Bany</span>
+                        <span>Cuina</span>
+                        <span>Menjador</span>
+                        <span>Lavabo</span>
+                        <span>Sala</span>
+                    </div>
+                    <div class="bar-container">
+                        <div class="bar bar-green" style="width: 25%">530KWh</div>
+                        <div class="bar bar-orange" style="width: 65%">1350KWh</div>
+                        <div class="bar bar-red" style="width: 85%">1760KWh</div>
+                        <div class="bar bar-green" style="width: 15%">389KWh</div>
+                        <div class="bar bar-yellow" style="width: 45%">1050KWh</div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="axis-x">
+                        <span>0</span>
+                        <span>400</span>
+                        <span>800</span>
+                        <span>1200</span>
+                        <span>1600</span>
+                        <span>KWh</span>
+                    </div>
+                </div> <!-- /Graph -->
+                <div class="graph" style="display: none" id="yearly">
+                    <div class="axis-y">
+                        <span>Bany</span>
+                        <span>Cuina</span>
+                        <span>Menjador</span>
+                        <span>Lavabo</span>
+                        <span>Sala</span>
+                    </div>
+                    <div class="bar-container">
+                        <div class="bar bar-green" style="width: 35%">1800KWh</div>
+                        <div class="bar bar-red" style="width: 95%">4850KWh</div>
+                        <div class="bar bar-yellow" style="width: 60%">3075KWh</div>
+                        <div class="bar bar-green" style="width: 20%">1100KWh</div>
+                        <div class="bar bar-orange" style="width: 65%">3280KWh</div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="axis-x">
+                        <span>0</span>
+                        <span>1000</span>
+                        <span>2000</span>
+                        <span>3000</span>
+                        <span>4000</span>
+                        <span>KWh</span>
+                    </div>
+                </div> <!-- /Graph -->
             </div>
+
         </div>
-        <h1>Comparativa amb els teus veïns</h1>
-        <div class="col-md-5" style="text-align:center">
-            <div class="comparison">
-                <h3>Consum anual dels teus veïns en kWh</h3>
-                <img src="img/bar-vecino.png" height="300" width="450">
-                <div style="text-align: center">
-                    <h4>Total : 1300</h4>
+
+        <div class="col-md-6 col-xs-12">
+            <h1>Comparativa relativa amb els teus veïns</h1>
+
+            <h4>
+                Els seguents grafics comparen el teu consum relatiu respecte a la mitjana dels teus veins a l'area on vius.
+            </h4>
+
+            <div id="graph-group-compare" style="padding: 0px 32px">
+                <div class="tab-nav">
+                    <span class="active" show="per-room">Per Habitació</span>
+                    <span show="per-period">Per Periode</span>
                 </div>
+                <br/>
+
+                <div class="graph" id="per-room">
+                    <div class="axis-y">
+                        <span>Tu: Cuina</span>
+                        <span>Veïns: Cuina</span>
+                        <span>&nbsp;</span>
+                        <span>Tu: Lavabo</span>
+                        <span>Veïns: Lavabo</span>
+                        <span>&nbsp;</span>
+                        <span>Tu: Menjador</span>
+                        <span>V.: Menjador</span>
+                        <span>&nbsp;</span>
+                        <span>Tu: Bany</span>
+                        <span>Veïns: Bany</span>
+                    </div>
+                    <div class="bar-container">
+                        <div class="bar bar-red" style="width: 65%">+25%</div>
+                        <div class="bar bar-green" style="width: 53%">&nbsp;</div>
+                        <div class="bar bar-none" style="width: 0%">&nbsp;</div>
+
+                        <div class="bar bar-green" style="width: 41%">-15%</div>
+                        <div class="bar bar-red" style="width: 53%">&nbsp;</div>
+                        <div class="bar bar-none" style="width: 0%">&nbsp;</div>
+
+                        <div class="bar bar-red" style="width: 60%">+12%</div>
+                        <div class="bar bar-green" style="width: 53%">&nbsp;</div>
+                        <div class="bar bar-none" style="width: 0%">&nbsp;</div>
+
+                        <div class="bar bar-green" style="width: 30%">-47%</div>
+                        <div class="bar bar-red" style="width: 53%">&nbsp;</div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="axis-x">
+                        <span>0</span>
+                        <span>25</span>
+                        <span>50</span>
+                        <span>75</span>
+                        <span>100</span>
+                        <span>125</span>
+                        <span>150</span>
+                        <span>%</span>
+                    </div>
+                </div> <!-- /Graph -->
+
+                <div class="graph" style="display: none" id="per-period">
+                    <div class="axis-y">
+                        <span>Tu: Diari</span>
+                        <span>Veïns: Diari</span>
+                        <span>&nbsp;</span>
+                        <span>Tu: Mensual</span>
+                        <span>Veins: Mensual</span>
+                        <span>&nbsp;</span>
+                        <span>Tu: Anual</span>
+                        <span>Veïns: Anual</span>
+                    </div>
+                    <div class="bar-container">
+                        <div class="bar bar-green" style="width: 40%">-18%</div>
+                        <div class="bar bar-red" style="width: 53%">&nbsp;</div>
+                        <div class="bar bar-none" style="width: 0%">&nbsp;</div>
+
+                        <div class="bar bar-green" style="width: 50%">-4%</div>
+                        <div class="bar bar-red" style="width: 53%">&nbsp;</div>
+                        <div class="bar bar-none" style="width: 0%">&nbsp;</div>
+
+                        <div class="bar bar-red" style="width: 63%">+21%</div>
+                        <div class="bar bar-green" style="width: 53%">&nbsp;</div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="axis-x">
+                        <span>0</span>
+                        <span>25</span>
+                        <span>50</span>
+                        <span>75</span>
+                        <span>100</span>
+                        <span>125</span>
+                        <span>150</span>
+                        <span>%</span>
+                    </div>
+                </div> <!-- /Graph -->
+
             </div>
-            <div class="comparison">
-                <h3>Consum mensual dels teus veïns en kWh</h3>
-                <img src="img/bar-vecino.png" height="300" width="450">
-                <div style="text-align: center">
-                    <h4>Total : 1300</h4>
-                </div>
-            </div>
-            <div class="comparison">
-                <h3>Consum diari dels teus veïns en kWh</h3>
-                <img src="img/bar-vecino.png" height="300" width="450">
-                <div style="text-align: center">
-                    <h4>Total : 1300</h4>
-                </div>
-            </div>
+
         </div>
+
     </div>
+
 </div>
-</body>
-</html>
+
+<style type="text/css">
+    #green-behavior .row {
+        text-align: center;
+    }
+
+    .clear {
+        clear: both;
+    }
+
+    .tab-nav {
+        padding: 0px;
+        text-align: justify;
+        height: 26px;
+    }
+
+    .tab-nav:after {
+        content: '';
+        width: 100%; /* Ensures there are at least 2 lines of text, so justification works */
+        display: inline-block;
+    }
+
+    .tab-nav span {
+        font-size: 18px;
+        font-weight: bold;
+        color: darkslategray;
+
+        padding: 0px 4px;
+        display: inline-block;
+        background-color: #96c93c;
+    }
+
+    .tab-nav span:hover, .tab-nav .active {
+        cursor: pointer;
+        background-color: #3c763d;
+        color: white;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .visible {
+        display: block;
+    }
+
+    /* PURE CSS GRAPH STYLE */
+
+    .graph {
+        font-weight: bold;
+    }
+
+    .graph .axis-y {
+        font-weight: bold;
+        line-height: 36px;
+        padding: 8px 0px;
+
+        float: left;
+        width: 20%;
+        border-right: 1px solid gray;
+    }
+
+    .graph .axis-y span {
+        display: block;
+    }
+
+    .graph .bar-container {
+        float: left;
+        width: 80%;
+        border-bottom: 1px solid gray;
+    }
+
+    .graph .axis-x {
+        font-weight: bold;
+
+        margin-left: 20%;
+        text-align: justify;
+    }
+
+    .graph .axis-x:after {
+        content: '';
+        width: 100%; /* Ensures there are at least 2 lines of text, so justification works */
+        display: inline-block;
+    }
+
+    .graph .axis-x span {
+        display: inline-block;
+        white-space: nowrap
+    }
+
+    .graph .bar {
+        text-align: right;
+        padding-right: 4px;
+        color: white;
+        font-weight: bold;
+        line-height: 20px;
+        margin: 16px 0px 15px 4px;
+        box-shadow: 4px 4px 0px lightgray;
+    }
+
+    .graph .bar-green {
+        background-color: #4cae4c;
+    }
+
+    .graph .bar-red {
+        background-color: #ac2925;
+    }
+
+    .graph .bar-yellow {
+        background-color: #E3C614;
+    }
+
+    .graph .bar-orange {
+        background-color: #d58512;
+    }
+
+    .graph .bar-none {
+        box-shadow: none;
+    }
+
+
+</style>
+
+<script src="js/jquery-ui.min.js"></script>
+
+<script type="text/javascript">
+
+
+    $(document).ready(function () {
+        tabifyGraphs("#graph-group-period");
+        tabifyGraphs("#graph-group-compare");
+
+    });
+
+    function tabifyGraphs(groupSelector) {
+        $(groupSelector + ' .tab-nav span').click(function (event) {
+            // Change active tab
+            $(groupSelector + ' .tab-nav .active').removeClass("active");
+            $(event.currentTarget).addClass("active");
+
+            // show relevant tab
+            var show = $(event.currentTarget).attr("show");
+
+            $(groupSelector + " .graph").hide();
+            $(groupSelector + " #" + show).fadeIn();
+
+            $(groupSelector + " .bar").each(function (index, element) {
+                var el = $(element);
+                var width = el[0].style.width;
+                el.css("width", 0);
+                el.animate({"width" : width}, 750);
+
+            })
+
+        });
+    }
+
+
+</script>
