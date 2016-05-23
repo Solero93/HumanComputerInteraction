@@ -22,6 +22,8 @@
             });
         });
     </script>
+    <!--hide detailed factura-->
+
 
 
 </head>
@@ -37,8 +39,79 @@
         <div id="yearly">
             <div class="col-lg-12">
                 <div class="content-panel">
-                    <h4><i class="fa fa-angle-right"></i> Novembre</h4>
+                    <h4><i class="fa fa-angle-right"></i> Resum Factura Novembre</h4>
                     <section id="unseen">
+                        <table class="table table-bordered table-striped table-condensed">
+                        <thead>
+                        <tr>
+                            <th>Conceptes</th>
+                            <th class="numeric">Consum (€)</th>
+                            <th class="numeric">Variació mes anterior %</th>
+                            <th class="numeric">Total</th>
+                        </tr>
+                        </thead>
+                            <tbody>
+                            <tr>
+                                <td>Cuina</td>
+                                <td class="numeric">35,47</td>
+                                <td class="numeric">14</td>
+                                <td class="numeric"></td>
+                            </tr>
+                            </tbody>
+                            <tbody>
+                            <tr>
+                                <td>Bany</td>
+                                <td class="numeric">5,47</td>
+                                <td class="numeric">-14</td>
+                                <td class="numeric"></td>
+                            </tr>
+                            </tbody>
+                            <tbody>
+                            <tr>
+                                <td>Sala d'estar</td>
+                                <td class="numeric">25,57</td>
+                                <td class="numeric">-4</td>
+                                <td class="numeric"></td>
+                            </tr>
+                            </tbody>
+                            <tbody>
+                            <tr>
+                                <td>Dormitori</td>
+                                <td class="numeric">15,36</td>
+                                <td class="numeric">45</td>
+                                <td class="numeric"></td>
+                            </tr>
+                            </tbody>
+                            <tbody>
+                            <tr>
+                                <td>Altres</td>
+                                <td class="numeric">35,47</td>
+                                <td class="numeric">14</td>
+                                <td class="numeric"></td>
+                            </tr>
+                            </tbody>
+                            <tbody>
+                            <tr>
+                                <td>Impostos i derivats</td>
+                                <td class="numeric">68,56</td>
+                                <td class="numeric">60</td>
+                                <td class="numeric"></td>
+                            </tr>
+                            </tbody>
+                            <tbody>
+                            <tr>
+                                <td><h4><b>TOTAL FACTURA</b></h4></td>
+                                <td class="numeric"></td>
+                                <td class="numeric"></td>
+                                <td class="numeric"><h4>126,48</h4></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="divspoiler">
+                            <input type="button" value="Mostrar Factura Detallada" onclick="if (this.parentNode.nextSibling.childNodes[0].style.display != '')
+                            { this.parentNode.nextSibling.childNodes[0].style.display = ''; this.value = 'Ocultar'; }
+                            else { this.parentNode.nextSibling.childNodes[0].style.display = 'none'; this.value = 'Mostrar Factura Detallada'; }" />
+                        </div><div><div class="spoiler" style="display: none;">
                         <table class="table table-bordered table-striped table-condensed">
                             <thead>
                             <tr>
@@ -441,7 +514,7 @@
                             </tbody>
                             <tbody>
                             <tr>
-                                <td>Dormitori i despatx</td>
+                                <td>Altres</td>
                                 <td></td>
                                 <td class="numeric"></td>
                                 <td class="numeric"></td>
@@ -480,7 +553,72 @@
                             </tr>
                             </tbody>
 
+
+                            <tbody>
+                            <tr>
+                                <td>Impostos</td>
+                                <td></td>
+                                <td class="numeric"></td>
+                                <td class="numeric"></td>
+                                <td class="numeric"></td>
+                                <td class="numeric"></td>
+                            </tr>
+                            </tbody>
+                            <tbody>
+                            <tr>
+                                <td></td>
+                                <td>Potencia contratada</td>
+                                <td class="numeric">15</td>
+                                <td class="numeric">25</td>
+                                <td class="numeric">0</td>
+                                <td class="numeric"></td>
+                            </tr>
+                            </tbody>
+                            <tbody>
+                            <tr>
+                                <td></td>
+                                <td>I.V.A</td>
+                                <td class="numeric">21%</td>
+                                <td class="numeric"></td>
+                                <td class="numeric"></td>
+                                <td class="numeric"></td>
+                            </tr>
+                            </tbody>
+
+
+                            <td>TOTAL Impostos</td>
+                            <td><b></b></td>
+                            <td class="numeric"></td>
+                            <td class="numeric"></td>
+                            <td class="numeric">15</td>
+                            <td class="numeric">35,48</td>
+                            </tr>
+                            </tbody>
+
+
+
+
+
+                            <td></td>
+                            <td><b></b></td>
+                            <td class="numeric"></td>
+                            <td class="numeric"></td>
+                            <td class="numeric"></td>
+                            <td class="numeric"></td>
+                            </tr>
+                            </tbody>
+
+                            <td><b>TOTAL FACTURA</b></td>
+                            <td></td>
+                            <td class="numeric"></td>
+                            <td class="numeric"></td>
+                            <td class="numeric"></td>
+                            <td class="numeric">150,48</td>
+                            </tr>
+                            </tbody>
+
                         </table>
+                    </div></div>
                     </section>
                 </div><!-- /content-panel -->
             </div><!-- /col-lg-4 -->
@@ -488,8 +626,79 @@
         <div id="monthly">
             <div class="col-lg-12">
                 <div class="content-panel">
-                    <h4><i class="fa fa-angle-right"></i> Desembre</h4>
+                    <h4><i class="fa fa-angle-right"></i> Resum Factura Desembre</h4>
                     <section id="unseen">
+                        <table class="table table-bordered table-striped table-condensed">
+                            <thead>
+                            <tr>
+                                <th>Conceptes</th>
+                                <th class="numeric">Consum (€)</th>
+                                <th class="numeric">Variació mes anterior %</th>
+                                <th class="numeric">Total</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Cuina</td>
+                                <td class="numeric">35,47</td>
+                                <td class="numeric">14</td>
+                                <td class="numeric"></td>
+                            </tr>
+                            </tbody>
+                            <tbody>
+                            <tr>
+                                <td>Bany</td>
+                                <td class="numeric">5,47</td>
+                                <td class="numeric">-14</td>
+                                <td class="numeric"></td>
+                            </tr>
+                            </tbody>
+                            <tbody>
+                            <tr>
+                                <td>Sala d'estar</td>
+                                <td class="numeric">25,57</td>
+                                <td class="numeric">-4</td>
+                                <td class="numeric"></td>
+                            </tr>
+                            </tbody>
+                            <tbody>
+                            <tr>
+                                <td>Dormitori</td>
+                                <td class="numeric">15,36</td>
+                                <td class="numeric">45</td>
+                                <td class="numeric"></td>
+                            </tr>
+                            </tbody>
+                            <tbody>
+                            <tr>
+                                <td>Altres</td>
+                                <td class="numeric">35,47</td>
+                                <td class="numeric">14</td>
+                                <td class="numeric"></td>
+                            </tr>
+                            </tbody>
+                            <tbody>
+                            <tr>
+                                <td>Impostos i derivats</td>
+                                <td class="numeric">68,56</td>
+                                <td class="numeric">60</td>
+                                <td class="numeric"></td>
+                            </tr>
+                            </tbody>
+                            <tbody>
+                            <tr>
+                                <td><h4><b>TOTAL FACTURA</b></h4></td>
+                                <td class="numeric"></td>
+                                <td class="numeric"></td>
+                                <td class="numeric"><h4>126,48</h4></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="divspoiler">
+                            <input type="button" value="Mostrar Factura Detallada" onclick="if (this.parentNode.nextSibling.childNodes[0].style.display != '')
+                            { this.parentNode.nextSibling.childNodes[0].style.display = ''; this.value = 'Ocultar'; }
+                            else { this.parentNode.nextSibling.childNodes[0].style.display = 'none'; this.value = 'Mostrar Factura Detallada'; }" />
+                        </div><div><div class="spoiler" style="display: none;">
                         <table class="table table-bordered table-striped table-condensed">
                             <thead>
                             <tr>
@@ -892,7 +1101,7 @@
                             </tbody>
                             <tbody>
                             <tr>
-                                <td>Dormitori i despatx</td>
+                                <td>Altres</td>
                                 <td></td>
                                 <td class="numeric"></td>
                                 <td class="numeric"></td>
@@ -931,18 +1140,153 @@
                             </tr>
                             </tbody>
 
+
+                            <tbody>
+                            <tr>
+                                <td>Impostos</td>
+                                <td></td>
+                                <td class="numeric"></td>
+                                <td class="numeric"></td>
+                                <td class="numeric"></td>
+                                <td class="numeric"></td>
+                            </tr>
+                            </tbody>
+                            <tbody>
+                            <tr>
+                                <td></td>
+                                <td>Potencia contratada</td>
+                                <td class="numeric">15</td>
+                                <td class="numeric">25</td>
+                                <td class="numeric">0</td>
+                                <td class="numeric"></td>
+                            </tr>
+                            </tbody>
+                            <tbody>
+                            <tr>
+                                <td></td>
+                                <td>I.V.A</td>
+                                <td class="numeric">21%</td>
+                                <td class="numeric"></td>
+                                <td class="numeric"></td>
+                                <td class="numeric"></td>
+                            </tr>
+                            </tbody>
+
+
+                            <td>TOTAL Impostos</td>
+                            <td><b></b></td>
+                            <td class="numeric"></td>
+                            <td class="numeric"></td>
+                            <td class="numeric">15</td>
+                            <td class="numeric">35,48</td>
+                            </tr>
+                            </tbody>
+
+
+
+
+
+                            <td></td>
+                            <td><b></b></td>
+                            <td class="numeric"></td>
+                            <td class="numeric"></td>
+                            <td class="numeric"></td>
+                            <td class="numeric"></td>
+                            </tr>
+                            </tbody>
+
+                            <td><b>TOTAL FACTURA</b></td>
+                            <td></td>
+                            <td class="numeric"></td>
+                            <td class="numeric"></td>
+                            <td class="numeric"></td>
+                            <td class="numeric">150,48</td>
+                            </tr>
+                            </tbody>
+
                         </table>
+                    </div></div>
                     </section>
                 </div><!-- /content-panel -->
             </div><!-- /col-lg-4 -->
-
 
         </div>
         <div id="daily">
             <div class="col-lg-12">
                 <div class="content-panel">
-                    <h4><i class="fa fa-angle-right"></i> Gener</h4>
+                    <h4><i class="fa fa-angle-right"></i> Resum Factura Gener</h4>
                     <section id="unseen">
+                        <table class="table table-bordered table-striped table-condensed">
+                            <thead>
+                            <tr>
+                                <th>Conceptes</th>
+                                <th class="numeric">Consum (€)</th>
+                                <th class="numeric">Variació mes anterior %</th>
+                                <th class="numeric">Total</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Cuina</td>
+                                <td class="numeric">35,47</td>
+                                <td class="numeric">14</td>
+                                <td class="numeric"></td>
+                            </tr>
+                            </tbody>
+                            <tbody>
+                            <tr>
+                                <td>Bany</td>
+                                <td class="numeric">5,47</td>
+                                <td class="numeric">-14</td>
+                                <td class="numeric"></td>
+                            </tr>
+                            </tbody>
+                            <tbody>
+                            <tr>
+                                <td>Sala d'estar</td>
+                                <td class="numeric">25,57</td>
+                                <td class="numeric">-4</td>
+                                <td class="numeric"></td>
+                            </tr>
+                            </tbody>
+                            <tbody>
+                            <tr>
+                                <td>Dormitori</td>
+                                <td class="numeric">15,36</td>
+                                <td class="numeric">45</td>
+                                <td class="numeric"></td>
+                            </tr>
+                            </tbody>
+                            <tbody>
+                            <tr>
+                                <td>Altres</td>
+                                <td class="numeric">35,47</td>
+                                <td class="numeric">14</td>
+                                <td class="numeric"></td>
+                            </tr>
+                            </tbody>
+                            <tbody>
+                            <tr>
+                                <td>Impostos i derivats</td>
+                                <td class="numeric">68,56</td>
+                                <td class="numeric">60</td>
+                                <td class="numeric"></td>
+                            </tr>
+                            </tbody>
+                            <tbody>
+                            <tr>
+                                <td><h4><b>TOTAL FACTURA</b></h4></td>
+                                <td class="numeric"></td>
+                                <td class="numeric"></td>
+                                <td class="numeric"><h4>126,48</h4></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="divspoiler">
+                            <input type="button" value="Mostrar Factura Detallada" onclick="if (this.parentNode.nextSibling.childNodes[0].style.display != '')
+                            { this.parentNode.nextSibling.childNodes[0].style.display = ''; this.value = 'Ocultar'; }
+                            else { this.parentNode.nextSibling.childNodes[0].style.display = 'none'; this.value = 'Mostrar Factura Detallada'; }" />
+                        </div><div><div class="spoiler" style="display: none;">
                         <table class="table table-bordered table-striped table-condensed">
                             <thead>
                             <tr>
@@ -1345,7 +1689,7 @@
                             </tbody>
                             <tbody>
                             <tr>
-                                <td>Dormitori i despatx</td>
+                                <td>Altres</td>
                                 <td></td>
                                 <td class="numeric"></td>
                                 <td class="numeric"></td>
@@ -1384,31 +1728,81 @@
                             </tr>
                             </tbody>
 
+
+                            <tbody>
+                            <tr>
+                                <td>Impostos</td>
+                                <td></td>
+                                <td class="numeric"></td>
+                                <td class="numeric"></td>
+                                <td class="numeric"></td>
+                                <td class="numeric"></td>
+                            </tr>
+                            </tbody>
+                            <tbody>
+                            <tr>
+                                <td></td>
+                                <td>Potencia contratada</td>
+                                <td class="numeric">15</td>
+                                <td class="numeric">25</td>
+                                <td class="numeric">0</td>
+                                <td class="numeric"></td>
+                            </tr>
+                            </tbody>
+                            <tbody>
+                            <tr>
+                                <td></td>
+                                <td>I.V.A</td>
+                                <td class="numeric">21%</td>
+                                <td class="numeric"></td>
+                                <td class="numeric"></td>
+                                <td class="numeric"></td>
+                            </tr>
+                            </tbody>
+
+
+                            <td>TOTAL Impostos</td>
+                            <td><b></b></td>
+                            <td class="numeric"></td>
+                            <td class="numeric"></td>
+                            <td class="numeric">15</td>
+                            <td class="numeric">35,48</td>
+                            </tr>
+                            </tbody>
+
+
+
+
+
+                            <td></td>
+                            <td><b></b></td>
+                            <td class="numeric"></td>
+                            <td class="numeric"></td>
+                            <td class="numeric"></td>
+                            <td class="numeric"></td>
+                            </tr>
+                            </tbody>
+
+                            <td><b>TOTAL FACTURA</b></td>
+                            <td></td>
+                            <td class="numeric"></td>
+                            <td class="numeric"></td>
+                            <td class="numeric"></td>
+                            <td class="numeric">150,48</td>
+                            </tr>
+                            </tbody>
+
                         </table>
+                    </div></div>
                     </section>
                 </div><!-- /content-panel -->
             </div><!-- /col-lg-4 -->
+
         </div>
     </div>
-
-
-
-
 </section><!--/wrapper -->
 <!-- /MAIN CONTENT -->
 
-<!--main content end-->
-<!--footer start-->
-<footer class="site-footer">
-    <div class="text-center">
-        2014 - Alvarez.is
-        <a href="responsive_table.html#" class="go-top">
-            <i class="fa fa-angle-up"></i>
-        </a>
-    </div>
-</footer>
-<!--footer end-->
-</section>
 
 <!-- js placed at the end of the document so the pages load faster -->
 <script src="assets/js/jquery.js"></script>
