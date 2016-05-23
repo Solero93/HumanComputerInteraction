@@ -71,8 +71,9 @@ $('document').ready(function () {
     });
 
     $("#close_button").click(function (event) {
-        info_div.hide();
-        $('#default_screen').show();
+        info_div.slideUp(500, function () {
+            $('#default_screen').show();
+        });
         var previous_device = info_div.data("device") + '_rect';
         $(previous_device).addClass('selectable').removeClass('selected');
         info_div.data("device", null);
@@ -81,8 +82,12 @@ $('document').ready(function () {
     $("#save_button").click(function () {
         saveData();
         var confirmation = $("#confirmation");
+        var button_div = $("#save_button_div");
+        button_div.toggleClass("col-xs-offset-8");
         confirmation.show();
-        confirmation.fadeOut(5000);
+        confirmation.fadeOut(5000, function () {
+            button_div.toggleClass("col-xs-offset-8");
+        });
     });
     // Consumption rate input box setup
     consumption_rate_input = $("#consumption_rate");
@@ -131,7 +136,7 @@ function display_info(electronics_rect) {
     } else {
         $("#default_screen").hide();
     }
-    // Load the new device now
+    // Mark the selected object
     $(electronics_rect).addClass("selected").removeClass("selectable");
     // Guardamos el id para futuro uso en caso que el usuario seleccione algo más
     info_div.data("device", electronics_id);
@@ -144,6 +149,6 @@ function display_info(electronics_rect) {
     consumption_rate_input.attr("placeholder", "~" + consumption_rate + "kWh");
     day_slider.slider('value', day_usage);
     night_slider.slider('value', night_usage);
-    info_div.show();
+    info_div.slideDown(500);
 }
 
