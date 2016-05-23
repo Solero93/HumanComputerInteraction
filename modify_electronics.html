@@ -1903,15 +1903,19 @@
         <div id="default_screen" style="display:flex;justify-content:center;align-items:center;">
             Selecciona un electrodomèstic i veuràs la seva informació!
         </div>
-        <div id="info_screen" style="margin-top: 3em; margin-bottom: 3em;">
-            <h1 id="device_name" class="label">Rentadora</h1>
-            <br>
-            <div>
+        <div id="info_screen" style="margin-top: 1em; margin-bottom: 3em;">
+            <div style="clear: both; text-align:right;">
+                <a href="#" id="close_button">
+                    <img src="img/close_dialog_button.svg" height="25px">
+                </a>
+            </div>
+            <h2 id="device_name" style="text-align: center">Rentadora</h2>
+            <div style="padding-top: 1em;padding-bottom: 1em;">
                 <p style="float: left; font-size: small;font-weight: bold;">Consum per hora </p>
                 <input id="consumption_rate" type="text" inputmode="numeric" placeholder="~55kWh"/>
             </div>
             <div id="device_usage" style="clear: both">
-                <h2 style="text-align: center; font-weight: bolder">Ús de l'aparell</h2>
+                <h3 style="text-align: center">Ús de l'aparell</h3>
                 <div id="day_usage" style="float: left; align-items: center; width: 33%;">
                     <div class="slider_title">Dia</div>
                     <div class="slider">
@@ -1933,16 +1937,22 @@
                     </div>
                 </div>
             </div>
-            <br>
-            <div style="clear: both">
+            <div style="clear: both; padding-top: 1ex; padding-bottom: 1ex;">
                 <p style="float: left; font-size: small;font-weight: bold; width: 50%; text-align: left">Consum estimat al mes </p>
                 <p id="monthly_usage" style="float: right; width: 50%; text-align: right; font-weight: bolder">~300 kWh</p>
             </div>
-            <br>
             <div style="clear: both">
-                <h4 style="text-align: left">Consells d'estalvi</h4>
+                <h3 style="text-align: center">Consells d'estalvi</h3>
                 <div style="text-align: left">
-                    Morbi ac erat a felis cursus tincidunt non ut sapien. Donec luctus urna eu tellus rhoncus laoreet. Etiam finibus, diam quis pellentesque mollis, diam sem porta neque, vitae pharetra risus velit ac eros. Curabitur aliquam elit a consectetur commodo. Suspendisse viverra tincidunt metus id ornare. Ut et arcu dolor.
+                    Morbi ac erat a felis cursus tincidunt non ut sapien. Donec luctus urna eu tellus rhoncus laoreet. Etiam finibus, diam quis pellentesque mollis, diam sem porta neque, vitae pharetra risus velit ac eros.
+                </div>
+            </div>
+            <div style="margin: 2ex">
+                <button id="save_button" type="button" class="btn btn-primary btn-lg" style="float:right;">
+                    Guardar
+                </button>
+                <div id="confirmation">
+                    S'han guardat bé les dades
                 </div>
             </div>
         </div>

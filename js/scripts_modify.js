@@ -70,6 +70,20 @@ $('document').ready(function () {
         max: 3
     });
 
+    $("#close_button").click(function (event) {
+        info_div.hide();
+        $('#default_screen').show();
+        var previous_device = info_div.data("device") + '_rect';
+        $(previous_device).addClass('selectable').removeClass('selected');
+        info_div.data("device", null);
+    });
+
+    $("#save_button").click(function () {
+        saveData();
+        var confirmation = $("#confirmation");
+        confirmation.show();
+        confirmation.fadeOut(5000);
+    });
     // Consumption rate input box setup
     consumption_rate_input = $("#consumption_rate");
     consumption_rate_input.focusout(function () {
@@ -85,8 +99,21 @@ $('document').ready(function () {
             $(this).blur();
         }
     });
+
+    $("#confirmation").hide();
+    info_div.data("device", null);
     info_div.hide();
 });
+
+function saveData() {
+    var day_usage, night_usage, consumption_rate;
+    var previous_device = info_div.data('device');
+    day_usage = day_slider.slider('value');
+    night_usage = night_slider.slider('value');
+    consumption_rate = consumption_rate_input.attr('placeholder');
+    consumption_rate = consumption_rate.substr(1, consumption_rate.length - 4);
+    $(previous_device).data({"day_usage": day_usage, "night_usage": night_usage, "consumption_rate": consumption_rate})
+}
 
 function display_info(electronics_rect) {
     var consumption_rate, day_usage, night_usage;
@@ -97,19 +124,14 @@ function display_info(electronics_rect) {
         return;
     }
     // In the case where we already are editing/viewing an object
-    if (previous_device !== undefined) {
-        // Save the data
-        day_usage = day_slider.slider('value');
-        night_usage = night_slider.slider('value');
-        consumption_rate = consumption_rate_input.attr('placeholder');
-        consumption_rate = consumption_rate.substr(1, consumption_rate.length - 4);
-        $(previous_device).data({"day_usage": day_usage, "night_usage": night_usage, "consumption_rate": consumption_rate});
+    if (previous_device !== null) {
         // Deselect the device
         $(previous_device + "_rect").removeClass("selected").addClass("selectable");
     // Otherwise, we replace the column with the info screen
     } else {
         $("#default_screen").hide();
     }
+    // Load the new device now
     $(electronics_rect).addClass("selected").removeClass("selectable");
     // Guardamos el id para futuro uso en caso que el usuario seleccione algo más
     info_div.data("device", electronics_id);
