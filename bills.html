@@ -1,22 +1,40 @@
 <link href="css/jquery-ui.css" rel="stylesheet">
 
+<script src="assets/js/jquery-ui-1.9.2.custom.min.js"></script>
 
 <script type="text/javascript">
-    $(document).ready(function () {
-
-        $("#tabs").tabs({
-            activate: function (event, ui) {
-                $('.comparison').hide();
-                $('.comparison').eq(ui.newTab.index()).show();
-            }
-        });
-
-        <!--Show the first comparison div initially-->
-        $('.comparison').hide();
-        $('.comparison').eq(0).show();
+    $(document).ready(function() {
+        $("#tabs").tabs();
     });
 </script>
 <!--hide detailed factura-->
+
+<script type="text/javascript">
+    function clickMoreNov() {
+        if (document.getElementById("moreNov").style.display==='none') {
+            document.getElementById("moreNov").style.display = 'block';
+        } else {
+            document.getElementById("moreNov").style.display = 'none';
+        }
+    }
+
+    function clickMoreDec() {
+        if (document.getElementById("moreDec").style.display==='none') {
+            document.getElementById("moreDec").style.display = 'block';
+        } else {
+            document.getElementById("moreDec").style.display = 'none';
+        }
+    }
+
+    function clickMoreJan() {
+        if (document.getElementById("moreJan").style.display==='none') {
+            document.getElementById("moreJan").style.display = 'block';
+        } else {
+            document.getElementById("moreJan").style.display = 'none';
+        }
+    }
+
+</script>
 
 
 <section class="wrapper">
@@ -99,12 +117,10 @@
                             </tbody>
                         </table>
                         <div class="divspoiler">
-                            <input type="button" value="Mostrar Factura Detallada" onclick="if (this.parentNode.nextSibling.childNodes[0].style.display != '')
-                            { this.parentNode.nextSibling.childNodes[0].style.display = ''; this.value = 'Ocultar'; }
-                            else { this.parentNode.nextSibling.childNodes[0].style.display = 'none'; this.value = 'Mostrar Factura Detallada'; }"/>
+                            <input type="button" value="Mostrar Factura Detallada" onclick="clickMoreNov()" />
                         </div>
                         <div>
-                            <div class="spoiler" style="display: none;">
+                            <div id="moreNov" class="spoiler" style="display: none !important;">
                                 <table class="table table-bordered table-striped table-condensed">
                                     <thead>
                                     <tr>
@@ -688,12 +704,10 @@
                             </tbody>
                         </table>
                         <div class="divspoiler">
-                            <input type="button" value="Mostrar Factura Detallada" onclick="if (this.parentNode.nextSibling.childNodes[0].style.display != '')
-                            { this.parentNode.nextSibling.childNodes[0].style.display = ''; this.value = 'Ocultar'; }
-                            else { this.parentNode.nextSibling.childNodes[0].style.display = 'none'; this.value = 'Mostrar Factura Detallada'; }"/>
+                            <input type="button" value="Mostrar Factura Detallada" onclick="clickMoreDec()"/>
                         </div>
                         <div>
-                            <div class="spoiler" style="display: none;">
+                            <div id="moreDec" class="spoiler" style="display: none !important;">
                                 <table class="table table-bordered table-striped table-condensed">
                                     <thead>
                                     <tr>
@@ -1277,12 +1291,10 @@
                             </tbody>
                         </table>
                         <div class="divspoiler">
-                            <input type="button" value="Mostrar Factura Detallada" onclick="if (this.parentNode.nextSibling.childNodes[0].style.display != '')
-                            { this.parentNode.nextSibling.childNodes[0].style.display = ''; this.value = 'Ocultar'; }
-                            else { this.parentNode.nextSibling.childNodes[0].style.display = 'none'; this.value = 'Mostrar Factura Detallada'; }"/>
+                            <input type="button" value="Mostrar Factura Detallada" onclick="clickMoreJan()"/>
                         </div>
                         <div>
-                            <div class="spoiler" style="display: none;">
+                            <div id="moreJan" class="spoiler" style="display: none !important;">
                                 <table class="table table-bordered table-striped table-condensed">
                                     <thead>
                                     <tr>
@@ -1798,6 +1810,5 @@
 <!-- /MAIN CONTENT -->
 
 <!-- js placed at the end of the document so the pages load faster -->
-<script src="js/jquery-ui.min.js"></script>
 <script src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
 <script src="assets/js/common-scripts.js"></script>
