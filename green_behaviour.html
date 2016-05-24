@@ -361,11 +361,11 @@
             $(groupSelector + " .graph").hide();
             $(groupSelector + " #" + show).fadeIn();
 
-            $(groupSelector + " .bar").each(function (index, element) {
+            $(groupSelector + " #" + show + " .bar").each(function (index, element) {
                 var el = $(element);
                 var width = el[0].style.width;
                 el.css("width", 0);
-                el.animate({"width" : width}, 750);
+                el.animate({"width": width}, 750);
 
             })
 
